@@ -5,6 +5,7 @@ function Sidebar(){
     return(
     
         <div className='sidebar'>
+            <Navbar />
             Sidebar
         </div>
         

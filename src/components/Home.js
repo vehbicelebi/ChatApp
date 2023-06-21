@@ -7,9 +7,11 @@ function Home(){
     return(
         <div className='home'>
             <div className='container'>
-                <Sidebar />                
+                <Sidebar />   
+                             
                 <Chatfield />
-          
+            
+
         
             </div>
         </div>
