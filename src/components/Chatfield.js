@@ -1,15 +1,30 @@
 import React from 'react'
+import Messages from './Messages';
+import Chatinfo from './Chatinfo';
+import Input from "./Input"
 
 function Chatfield(){
     return(
+        <div>
+        <Chatinfo />
         <div className='chatfield'>
+        <Messages />
+        {/*
         <div className='chatInfo'>
-            Chatinfo
+            <span id='chatInfoName'>Vehbi</span>
         </div>
-        Chatfield
+        */}
+        
+            <div className='chatBubbleField'>
+                
+            </div>
+        {/*
         <div className='inputField'>
             Inputfield
         </div>
+        */}
+        </div>
+        <Input />
         </div>
     )
 }

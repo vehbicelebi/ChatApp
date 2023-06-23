@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "./Navbar"
 import SearchUser from './SearchUser';
-import Avatar from '@mui/material/Avatar';
+import Chats from './Chats';
 
 
 function Sidebar(){
@@ -10,15 +10,14 @@ function Sidebar(){
         <div className='sidebar'>
             <Navbar />
             <SearchUser />
-            <div className='userChat'>
-                <div className='oneChatContainer'>
-                    <Avatar className="avatar" src="https://picsum.photos/seed/picsum/200/300"/>
-                    <span className='chatName'>Vehbi</span>
-                </div>
-            </div>
+
+                <Chats />
+            
         </div>
         
     )
 }
 
 export default Sidebar;
+
+/*31:13 */
