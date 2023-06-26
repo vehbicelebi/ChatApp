@@ -13,10 +13,25 @@ body {
     display: flex;
     justify-content: center;
     width: 400px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-top: 200px;
     margin-left: 500px;
     border-radius: 20px;
+    
 }
+
+.formContainer > form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.formContainer > form > input {
+    width: 250px;
+}
+
 
 input {
     margin: 5px;
@@ -205,6 +220,7 @@ input {
     &:hover{
         background-color: #F5F5F5;
     }
-    
 }
 
+
+/*33:18*/
