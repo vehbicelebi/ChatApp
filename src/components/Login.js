@@ -4,8 +4,10 @@ import { auth } from "../firebase"
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login(){
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const signIn = (e) => {
         e.preventDefault(); // Damit die Seite nicht neu lädt wenn man auf den Button drückt. So verliert man nicht die states von email und password
         signInWithEmailAndPassword(auth, email, password)
@@ -13,6 +15,7 @@ function Login(){
             console.log(userCredential)
         })
     }
+
     return(
             <div className="formContainer">
                 <form onSubmit={signIn}>

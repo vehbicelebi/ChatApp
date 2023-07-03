@@ -4,7 +4,6 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 
 
-
 function Register(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -16,9 +15,7 @@ function Register(){
         })
     }
 
-
-   
-
+    
     return(
             <div className="formContainer">
                 <form onSubmit={signUp}>

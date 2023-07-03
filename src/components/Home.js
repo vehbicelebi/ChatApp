@@ -4,6 +4,7 @@ import Chatfield from './Chatfield'
 import Input from './Input';
 
 function Home(){
+    
     return(
         <div className='home'>
             <div className='container'>
@@ -16,6 +17,7 @@ function Home(){
             </div>
         </div>
     );
+    
 }
 
 export default Home
