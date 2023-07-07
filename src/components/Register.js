@@ -1,21 +1,36 @@
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, db, storage } from '../firebase';
+import { doc, setDoc } from "firebase/firestore"; 
+import { useNavigate, Link } from 'react-router-dom';
+
 
 
 function Register(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const signUp = (e) => {
-        e.preventDefault(); // Damit die Seite nicht neu lädt wenn man auf den Button drückt. So verliert man nicht die states von email und password
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential)
-        })
-    }
-
     
+    const navigate = useNavigate();
+
+    const signUp = async (e) => {
+        const userName = e.target[0].value;
+        const email = e.target[1].value;
+        const password = e.target[2].value;
+        e.preventDefault(); // Damit die Seite nicht neu lädt wenn man auf den Button drückt. So verliert man nicht die states von email und password
+        const res = await createUserWithEmailAndPassword(auth, email, password)   
+     
+        // Add a new document in collection "cities"
+        await setDoc(doc(db, "users", res.user.uid), {
+            uid: res.user.uid,
+            userName,
+            email
+        });
+        await setDoc(doc(db, "userChats", res.user.uid), {});
+        navigate("/");
+    }
+  
+
     return(
             <div className="formContainer">
                 <form onSubmit={signUp}>
@@ -26,7 +41,7 @@ function Register(){
                     {/*<input style={{display:"none"}}  type='file' id='fileForAvatar'/>
                     <label htmlFor='fileForAvatar'><UploadIcon /></label> */}
                     <Button sx={{marginTop: "5px"}}  className="signButton" variant="contained" type='submit'>Sign up</Button>
-                    <p className='logIfAcc'>You do have an account? <a href='https://www.google.com/'>Login</a></p>
+                    <p className='logIfAcc'>You do have an account? <Link to="/logins">Login</Link></p>
                 </form>
             </div>
         
@@ -36,3 +51,4 @@ function Register(){
 export default Register
 
 /*<Button sx={{backgroundColor: "#DC143C", height: "35px", width: "75px"}}  className="signButton" variant="contained">Logout</Button>*/
+/*1:02:28 */
