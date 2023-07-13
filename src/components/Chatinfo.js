@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ChatContext } from "../context/ChatContext";
 
 function Chatinfo(){
+
+    const {data} = useContext(ChatContext);
     return(
     <div className='chatInfo'>
-        <span id='chatInfoName'>Vehbi</span>
+        <span id='chatInfoName'>{data.user?.userName}</span>
     </div>
     );
 }

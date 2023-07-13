@@ -4,6 +4,9 @@ import Chatinfo from './Chatinfo';
 import Input from "./Input"
 
 function Chatfield(){
+
+
+    
     return(
         <div>
         <Chatinfo />
