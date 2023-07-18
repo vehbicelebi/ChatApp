@@ -83,7 +83,7 @@ function Input(){
                 <label htmlFor="file-input">
                     <AttachFileIcon sx={{cursor: "pointer"}}/>
                 </label>
-                <input onChange={(e) => setImg(e.target.value)}  id="file-input" type='file' />
+                <input onChange={(e) => setImg(e.target.files[0])}  id="file" type='file' />
             </div>
 
             <div className='iconContainer'>

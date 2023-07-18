@@ -21,6 +21,7 @@ function Message({message}){
             <Avatar className="avatar" src="https://picsum.photos/seed/picsum/200/300"/>
             {//<span className='whenMessageSent'>just now</span>
             }
+            
         </div>
         <div className='messageContent'>
         
