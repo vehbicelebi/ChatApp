@@ -35,7 +35,8 @@ function Chats(){
                 <div className='oneChatContainer'>
                     <Avatar className="avatar" src="https://picsum.photos/seed/picsum/200/300"/>
                     <div>
-                        <span className='chatName'>{chat[1].userInfo.userName}</span>
+                        {// <span className='chatName'>{chat[1].userInfo.userName}</span>
+                        }
                         <p className='chatMessage'>{chat[1].lastMessage?.text}</p>
                     </div>
                 </div>
@@ -45,3 +46,5 @@ function Chats(){
 }
 
 export default Chats;
+
+// Fehler mit userName wurde in dieser Datei gefunden.

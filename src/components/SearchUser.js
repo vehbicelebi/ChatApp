@@ -5,17 +5,13 @@ import Avatar from '@mui/material/Avatar';
 import {AuthContext} from "../context/AuthContext"
 import { updateDoc, serverTimestamp } from "firebase/firestore";
 
-
-
-
-
 function SearchUser(){
     const [username, setUsername] = useState("");
     const [user, setUser] = useState("");
 
     const { currentUser } = useContext(AuthContext)
 
-    const handleSearch = async (e) => {
+    const handleSearch = async () => {
         const q = query(collection(db, "users"),
         where("userName", "==", username)
         );

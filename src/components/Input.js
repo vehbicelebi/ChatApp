@@ -9,10 +9,6 @@ import { db, storage } from '../firebase';
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
-
-
-
-
 function Input(){
 
     const [text, setText] = useState("");

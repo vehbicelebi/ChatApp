@@ -13,7 +13,7 @@ function Messages(){
             doc.exists() && setMessages(doc.data().messages)
         })
         return ()=>{
-            unSub()
+            unSub();
         }
     },[data.chatId])
     console.log(messages);
@@ -28,3 +28,4 @@ function Messages(){
 }
 
 export default Messages;
+

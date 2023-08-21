@@ -12,3 +12,6 @@ function Chatinfo(){
 }
 
 export default Chatinfo;
+
+
+// Letzte Nachricht aus dem Text wird das auch bei dem anderen User angezeigt.
