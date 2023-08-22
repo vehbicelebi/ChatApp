@@ -2,9 +2,9 @@
 
 ![Chat Application](./Bildschirm­foto%202023-08-22%20um%2009.37.48.png)
 
-This project is a chat application, that allows two users to communicate with a messenger. It has an authentication system, where you can sign in and your email and password will be stored in a firebase database. For these tasks I use firebase. 
+This project is a chat application, that allows two users to communicate with a messenger. It has an authentication system, where you can sign in and your email and password will be stored in a firebase database. For authentication I use firebase.
 
-It has also an integrated ChatBot with static responses, where you can ask specific questions that is listet below:
+It has also an integrated ChatBot with static responses, where you can ask specific questions that is listed below:
 
 ### Questions
 + Which book do you recommend?
