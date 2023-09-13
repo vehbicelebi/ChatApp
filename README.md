@@ -4,7 +4,7 @@
 
 This project is a chat application, that allows two users to communicate with a messenger. It has an authentication system, where you can sign in and your email and password will be stored in a firebase database. For authentication I use firebase.
 
-It has also an integrated ChatBot with static responses, where you can ask specific questions that is listed below:
+It has also an integrated ChatBot with static responses, where you can ask specific questions that are listed below:
 
 ### Questions
 + Which book do you recommend?
